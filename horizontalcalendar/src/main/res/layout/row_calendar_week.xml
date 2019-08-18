@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="7">
+
+    <LinearLayout
+        android:id="@+id/dayOne"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dayOneMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aug" />
+
+        <TextView
+            android:id="@+id/dayOneDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19" />
+
+        <TextView
+            android:id="@+id/dayOneDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dayTwo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dayTwoMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aug" />
+
+        <TextView
+            android:id="@+id/dayTwoDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20" />
+
+        <TextView
+            android:id="@+id/dayTwoDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dayThree"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dayThreeMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aug" />
+
+        <TextView
+            android:id="@+id/dayThreeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="21" />
+
+        <TextView
+            android:id="@+id/dayThreeDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wed" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dayFour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dayFourMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aug" />
+
+        <TextView
+            android:id="@+id/dayFourDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22" />
+
+        <TextView
+            android:id="@+id/dayFourDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thu" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dayFive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dayFiveMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aug" />
+
+        <TextView
+            android:id="@+id/dayFiveDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23" />
+
+        <TextView
+            android:id="@+id/dayFiveDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fri" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/daySix"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/daySixMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aug" />
+
+        <TextView
+            android:id="@+id/daySixDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24" />
+
+        <TextView
+            android:id="@+id/daySixDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sat" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/daySeven"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/daySevenMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aug" />
+
+        <TextView
+            android:id="@+id/daySevenDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25" />
+
+        <TextView
+            android:id="@+id/daySevenDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sun" />
+    </LinearLayout>
+</LinearLayout>
