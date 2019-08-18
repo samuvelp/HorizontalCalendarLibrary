@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -17,9 +16,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-public class HorizontalCalendarView extends LinearLayout {
+public class HorizontalCalendarView extends LinearLayout implements HorizontalCalendarAdapter.OnDaySelectedListener {
     RecyclerView mCalendarRecyclerView;
-    ArrayList<DayDateMonthModel> calendarList = new ArrayList<>();
+    ArrayList<DayDateMonthModel> calendarList;
     int lastPosition = -1;
     Calendar cal;
     Calendar calPrevious;
@@ -28,6 +27,9 @@ public class HorizontalCalendarView extends LinearLayout {
     private int loadCount = 7;
     private int maxWeek = 2;
     private int weekNo = 1;
+    private int currentPosition = 1;
+    HorizontalCalendarListener mHorizontalCalendarListener;
+    LinearLayout mPreviousButton, mNextButton;
 
     public HorizontalCalendarView(Context context) {
         super(context);
@@ -44,18 +46,52 @@ public class HorizontalCalendarView extends LinearLayout {
         init();
     }
 
+    public void setHorizontalCalendarListener(HorizontalCalendarListener horizontalCalendarListener) {
+        this.mHorizontalCalendarListener = horizontalCalendarListener;
+    }
+
     private void init() {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.horizontal_calendar_view, this);
         mCalendarRecyclerView = view.findViewById(R.id.horizontalCalendarRv);
+        mPreviousButton = view.findViewById(R.id.swipe_left);
+        mNextButton = view.findViewById(R.id.swipe_right);
         prepareData();
+        setRecyclerView();
+        setScrollListener();
+        setClickListeners();
+    }
+
+    private void setClickListeners() {
+        mPreviousButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (currentPosition > 0)
+                    mCalendarRecyclerView.smoothScrollToPosition(currentPosition - 1);
+            }
+        });
+        mNextButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (currentPosition < (calendarList.size() / 7))
+                    mCalendarRecyclerView.smoothScrollToPosition(currentPosition + 1);
+            }
+        });
+    }
+
+    private void setRecyclerView() {
         HorizontalCalendarAdapter horizontalCalendarAdapter = new HorizontalCalendarAdapter();
         horizontalCalendarAdapter.setCalendar(getContext(), calendarList);
+        horizontalCalendarAdapter.setOnDaySelectedListener(this);
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), HORIZONTAL, false);
         mCalendarRecyclerView.setLayoutManager(linearLayoutManager);
         SnapHelper snapHelperOneByOne = new SnapHelperOneByOne();
         snapHelperOneByOne.attachToRecyclerView(mCalendarRecyclerView);
         mCalendarRecyclerView.setAdapter(horizontalCalendarAdapter);
         mCalendarRecyclerView.smoothScrollToPosition(1);
+        horizontalCalendarAdapter.notifyDataSetChanged();
+    }
+
+    private void setScrollListener() {
         mCalendarRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
@@ -66,8 +102,10 @@ public class HorizontalCalendarView extends LinearLayout {
                     final int position = offset / myCellWidth;
                     if (lastPosition != position) {
                         lastPosition = position;
-                        getDates(position + 1);
-                        Toast.makeText(getContext(), "" + position, Toast.LENGTH_SHORT).show();
+                        currentPosition = position;
+                        if (mHorizontalCalendarListener != null) {
+                            mHorizontalCalendarListener.onCalendarSwiped(getDates(position + 1));
+                        }
                     }
                 }
             }
@@ -119,6 +157,7 @@ public class HorizontalCalendarView extends LinearLayout {
         currentDayModel.day = partsDate[1];
         currentDayModel.year = partsDate[2];
         currentDayModel.monthNumeric = partsDate[3];
+        currentDayModel.isSelected = true;
         currentDayModel.isToday = true;
         calPrevious = Calendar.getInstance();
         cal = Calendar.getInstance();
@@ -178,5 +217,18 @@ public class HorizontalCalendarView extends LinearLayout {
             calendarList.add(currentDayMode);
 
         }
+
+    }
+
+    @Override
+    public void onDaySelected(DayDateMonthModel dayDateMonthModel) {
+        if (mHorizontalCalendarListener != null)
+            mHorizontalCalendarListener.onDaySelected(dayDateMonthModel);
+    }
+
+    public interface HorizontalCalendarListener {
+        void onCalendarSwiped(ArrayList<String> dates);
+
+        void onDaySelected(DayDateMonthModel dayDateMonthModel);
     }
 }

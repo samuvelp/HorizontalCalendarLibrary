@@ -7,4 +7,5 @@ public class DayDateMonthModel {
     public String day;
     public String monthNumeric;
     public Boolean isToday;
+    public Boolean isSelected = false;
 }

@@ -6,6 +6,7 @@
     tools:context=".MainActivity">
 
     <com.samuvel.pandian.horizontalcalendar.HorizontalCalendarView
+        android:id="@+id/horizontalCalenderView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

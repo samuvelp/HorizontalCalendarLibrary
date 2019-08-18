@@ -11,6 +11,7 @@ public class HorizontalCalendarViewHolder extends RecyclerView.ViewHolder {
     TextView dayOneDay, dayTwoDay, dayThreeDay, dayFourDay, dayFiveDay, daySixDay, daySevenDay;
     TextView dayOneMonth, dayTwoMonth, dayThreeMonth, dayFourMonth, dayFiveMonth, daySixMonth, daySevenMonth;
     LinearLayout dayOne, dayTwo, dayThree, dayFour, dayFive, daySix, daySeven;
+    View dayOneHl, dayTwoHl, dayThreeHl, dayFourHl, dayFiveHl, daySixHl, daySevenHl;
 
     public HorizontalCalendarViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -45,5 +46,13 @@ public class HorizontalCalendarViewHolder extends RecyclerView.ViewHolder {
         dayFive = itemView.findViewById(R.id.dayFive);
         daySix = itemView.findViewById(R.id.daySix);
         daySeven = itemView.findViewById(R.id.daySeven);
+
+        dayOneHl = itemView.findViewById(R.id.dayOneHighLight);
+        dayTwoHl = itemView.findViewById(R.id.dayTwoHighLight);
+        dayThreeHl = itemView.findViewById(R.id.dayThreeHighLight);
+        dayFourHl = itemView.findViewById(R.id.dayFourHighLight);
+        dayFiveHl = itemView.findViewById(R.id.dayFiveHighLight);
+        daySixHl = itemView.findViewById(R.id.daySixHighLight);
+        daySevenHl = itemView.findViewById(R.id.daySevenHighLight);
     }
 }

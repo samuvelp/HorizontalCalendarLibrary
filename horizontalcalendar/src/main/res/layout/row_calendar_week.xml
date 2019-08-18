@@ -2,7 +2,10 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp"
     android:weightSum="7">
 
     <LinearLayout
@@ -10,25 +13,37 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/dayOneMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aug" />
+            android:text="Aug"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/dayOneDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="19" />
+            android:text="19"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/dayOneDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mon" />
+            android:text="Mon"
+            android:textColor="#000000" />
+
+        <View
+            android:id="@+id/dayOneHighLight"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#794BD7"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -36,25 +51,37 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/dayTwoMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aug" />
+            android:text="Aug"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/dayTwoDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20" />
+            android:text="20"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/dayTwoDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tue" />
+            android:text="Tue"
+            android:textColor="#000000" />
+
+        <View
+            android:id="@+id/dayTwoHighLight"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#794BD7"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -62,25 +89,37 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/dayThreeMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aug" />
+            android:text="Aug"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/dayThreeDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="21" />
+            android:text="21"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/dayThreeDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wed" />
+            android:text="Wed"
+            android:textColor="#000000" />
+
+        <View
+            android:id="@+id/dayThreeHighLight"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#794BD7"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -88,25 +127,37 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/dayFourMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aug" />
+            android:text="Aug"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/dayFourDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="22" />
+            android:text="22"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/dayFourDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thu" />
+            android:text="Thu"
+            android:textColor="#000000" />
+
+        <View
+            android:id="@+id/dayFourHighLight"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#794BD7"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -114,25 +165,37 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/dayFiveMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aug" />
+            android:text="Aug"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/dayFiveDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="23" />
+            android:text="23"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/dayFiveDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fri" />
+            android:text="Fri"
+            android:textColor="#000000" />
+
+        <View
+            android:id="@+id/dayFiveHighLight"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#794BD7"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -140,25 +203,37 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/daySixMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aug" />
+            android:text="Aug"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/daySixDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="24" />
+            android:text="24"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/daySixDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sat" />
+            android:text="Sat"
+            android:textColor="#000000" />
+
+        <View
+            android:id="@+id/daySixHighLight"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#794BD7"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -166,24 +241,36 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:gravity="center"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/daySevenMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aug" />
+            android:text="Aug"
+            android:textColor="#000000" />
 
         <TextView
             android:id="@+id/daySevenDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="25" />
+            android:text="25"
+            android:textColor="#000000"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/daySevenDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sun" />
+            android:text="Sun"
+            android:textColor="#000000" />
+
+        <View
+            android:id="@+id/daySevenHighLight"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#794BD7"
+            android:visibility="invisible" />
     </LinearLayout>
 </LinearLayout>

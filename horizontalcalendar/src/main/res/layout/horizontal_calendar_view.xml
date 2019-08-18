@@ -2,11 +2,52 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#00C1B2"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/swipe_left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_weight=".5"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/left_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_double_left_chevron" />
+
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/horizontalCalendarRv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="8"/>
 
+    <LinearLayout
+        android:id="@+id/swipe_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="5dp"
+        android:layout_weight=".5"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/right_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_double_angle_pointing_to_right" />
+    </LinearLayout>
 </LinearLayout>
